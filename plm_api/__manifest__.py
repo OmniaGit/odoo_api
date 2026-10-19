@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+##############################################################################
+#
+#    OmniaSolutions, Your own solutions
+#    Copyright (C) 2020-2021 OmniaSolutions (<https://omniasolutions.website>).
+#    $Id$
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+# Leonardo Cazziolati
+# leonardo.cazziolati@omniasolutions.eu
+# 23-06-2020
+
+{
+    "name": "PLM Api Connector",
+    "version": "19.0.1.1.0",
+    "author": "OmniaSolutions",
+    "website": "https://www.omniasolutions.website",
+    "category": "Manufacturing/Product Lifecycle Management (PLM)",
+    "license": "AGPL-3",
+    "summary": "PLM Api (product configurator) Connector",
+    "depends": ["product", "plm"],
+    "data": [
+        "security/base_plm_security.xml",
+        "data/sequence.xml",
+        "views/product_view.xml",
+        "views/api_server.xml",
+        "views/sale_order.xml",
+    ],
+    'assets': {
+        'web.assets_backend': [
+            'plm_api/static/src/js/sale_product_configurator.js',
+            'plm_api/static/src/js/api_product_configurator_dialog.js',
+        ],
+    },
+    "installable": True,
+}

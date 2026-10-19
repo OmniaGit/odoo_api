@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="plm_product_product_normal_form_view_inherit" model="ir.ui.view">
+            <field name="name">plm.product.product.normal.form.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+               <xpath expr="//page[@name='general_information']" position="after">
+                    <page name="api" string="Api Configuration">
+                        <group>
+	                        <field name="api_engine_id"/>
+	                        <button name="action_fill_up_engines" type="object" string="..." colspan="2"/>
+	                        <field name="api_server_id"/>
+	                        <button name="action_recover_engine_attributes" type="object" string="..." colspan="2"/>
+                        </group>
+                    </page>
+                </xpath>
+              </field>
+        </record>
+    </data>
+</odoo>

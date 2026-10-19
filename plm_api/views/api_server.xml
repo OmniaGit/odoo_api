@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+	    <record model="ir.actions.act_window" id="id_action_api_server">
+	      <field name="name">Api Server</field>
+	      <field name="res_model">api.server</field>
+	      <field name="view_mode">list,form</field>
+	    </record>
+        
+        <record model="ir.actions.act_window" id="id_action_api_node_engine">
+          <field name="name">Node Engine</field>
+          <field name="res_model">api.nodeengine</field>
+          <field name="view_mode">list,form</field>
+        </record>
+        	    
+        <menuitem
+                name="Api"
+                id="menu_api"
+                parent="plm.plm_menu_dictionaries"/>
+	    <menuitem
+	            name="Api Servers"
+	            action="id_action_api_server"
+	            id="menu_api_server"
+	            parent="menu_api"/>
+        <menuitem
+                name="Api Node Engine"
+                action="id_action_api_node_engine"
+                id="menu_api_node_engine"
+                parent="menu_api"/>
+    </data>
+</odoo>
